@@ -12,12 +12,16 @@
 </head>
 <body>
 
-  <nav>
+  <nav id="myTopnav">
     <a href="#about">About Us</a>
     <a href="#what">What We Do</a>
     <a href="#trips">Our Trips</a>
     <a href="#where">Where to go</a>
     <a href="#reviews">Reviews</a>
+    
+    <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+      <i class="fa fa-bars"></i>
+    </a>
   </nav>
 
   <header>
@@ -34,7 +38,7 @@
       </p>
       <p>
         She shares her enthusiasm for the outdoors as a brand ambassador for Sporting Life, and has worked on 
-        campaigns for Travel Alberta, Expedia and Flight Hub.
+        campaigns for Travel Alberta, Expedia and Flight Hub. Leigh is the author of Discover Canada: 100 Inspiring Outdoor Adventures.
       </p>
     </div>
     <div class="image">
@@ -88,7 +92,7 @@
         <h2>Where do you want to go?</h2>
         <p>
             You'll find 21 detailed adventure guides, over a hundred practical travel tips, book reviews on anything outdoors related, 
-            packing lists on a range of outdoor activities including kayaking, backpacking and camping.
+            packing lists on a range of outdoor activities including kayaking, backpacking and camping as well as honest hotel and B&B reviews.
         </p>
         <a href="mailto:contact@example.com" class="btn-contact">CONTACT US</a>
     </div>
@@ -101,7 +105,7 @@
     <div class="reviews-container">
         <article>
           <img src="Obrazky/kalen-emsley-kGSapVfg8Kw-unsplash.jpg" alt="Bertie Norton" class="avatar">
-          <p>"She has booked two major European trips for us in the past year and every aspect has met, and in most cases exceeded, our expectations."</p>
+          <p>"She has booked two major European trips for us in the past year and every aspect has met, and in most cases exceeded, our expectations. Best prices, best hotels, best itineraries."</p>
           <strong>Bertie Norton</strong>
         </article>
 
@@ -112,15 +116,37 @@
         </article>
     </div>
   </section>
-<section id="bottom-gallery">
+
+  <section id="bottom-gallery">
     <img src="Obrazky/alexey-fedenkov-BaCZYH9RLmQ-unsplash.jpg" alt="Gallery image 1">
     <img src="Obrazky/omer-salom-LoijtQXXNhs-unsplash.jpg" alt="Gallery image 2">
     <img src="Obrazky/vincentiu-solomon-7MH4ped6_Mo-unsplash.jpg" alt="Gallery image 3">
     <img src="Obrazky/charles-black-F7HGqkkMYAU-unsplash.jpg" alt="Gallery image 4">
   </section>
+
   <footer>
       <p>2022-Your Travel Assistant. All Rights Reserved</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "") {
+        x.className += " responsive";
+      } else {
+        x.className = "";
+      }
+    }
+
+    if (history.scrollRestoration) {
+        history.scrollRestoration = 'manual';
+    } else {
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        }
+    }
+    window.scrollTo(0, 0);
+  </script>
 
 </body>
 </html>

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: auto;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -18,6 +22,8 @@ nav {
     position: sticky;
     top: 0;
     z-index: 1000;
+    min-height: 60px;
+    align-items: center;
 }
 
 nav a {
@@ -27,10 +33,15 @@ nav a {
     font-size: 0.9rem;
     font-weight: 500;
     transition: color 0.3s;
+    display: block;
 }
 
 nav a:hover {
     color: #ccc;
+}
+
+nav .icon {
+    display: none;
 }
 
 header {
@@ -266,21 +277,56 @@ footer {
         text-align: center;
     }
 
-    #trips .grid-container {
-        grid-template-columns: repeat(2, 1fr);
+
+    nav {
+        position: sticky;
+        top: 0;
+        padding: 0;
+    }
+
+    nav a:not(:last-child) {
+        display: none;
+    }
+
+    nav a.icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 5px; 
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    nav.responsive {
+        position: fixed;
+        width: 100%;
+        height: auto;
+        background-color: #2e282a;
+        top: 0;
+        left: 0;
+        z-index: 9999;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 60px;
+        padding-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    }
+
+    nav.responsive a {
+        display: block;
+        width: 100%;
+        text-align: right;
+        padding: 15px 30px;
+        margin: 0;
+        border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    nav.responsive a.icon {
+        display: block;
     }
 }
 
 @media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    nav a {
-        margin: 5px 0;
-    }
-
     header h1 {
         font-size: 3rem;
         text-align: center;
