@@ -35,7 +35,7 @@ nav a:hover {
 
 header {
     background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), 
-                url('vzhled_tablet.pdf_page_1.png') no-repeat center center/cover;
+                url('Obrazky/scott-goodwill.jpg') no-repeat center center/cover;
     height: 80vh;
     display: flex;
     align-items: flex-end;
@@ -235,6 +235,19 @@ header h1 {
     font-weight: bold;
 }
 
+#bottom-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#bottom-gallery img {
+    width: 50%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+}
+
 footer {
     background-color: #2e282a;
     color: #888;
@@ -291,5 +304,9 @@ footer {
     #where .where-content {
         align-items: center;
         text-align: center;
+    }
+
+    #bottom-gallery img {
+        width: 100%;
     }
 }
